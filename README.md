@@ -2,12 +2,12 @@
 CEH Exam Notes
 
 Useful Links:
-https://gtfobins.github.io/ - List of binaries that can be used to exploit misconfigured permissions.
-https://www.rapid7.com/db/ - Vulnerability and Exploit Database
-https://crackstation.net/ - List of Password Hashes to crack online
-https://github.com/danielmiessler/SecLists - Wordlists, payloads, web shells
-https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md - Reverse shell cheatsheet
-https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php - PHP reverse shell for web servers
+- https://gtfobins.github.io/ - List of binaries that can be used to exploit misconfigured permissions.
+- https://www.rapid7.com/db/ - Vulnerability and Exploit Database
+- https://crackstation.net/ - List of Password Hashes to crack online
+- https://github.com/danielmiessler/SecLists - Wordlists, payloads, web shells
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md - Reverse shell cheatsheet
+- https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php - PHP reverse shell for web servers
 
 Linux Priv Esc
   Enumeration
@@ -28,3 +28,27 @@ Linux Priv Esc
   
   PrivEsc - Capabilites
   - getcap -r / 2>/dev/null
+
+  
+  
+  Windows Priv Esc
+    Stored Credentials
+    - Unattended Windows Installations
+      - c:\Unattend.xml
+      - c:\Windows\Panther\Unattend.xml
+      - c:\Windows\Panther\Unattend\Unattend.xml
+      - c:\Windows\System32\sysprep.inf
+      - c:\Windows\System32\sysprep\sysprep.xml
+  
+    - Powershell History - in cmd type "type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+  
+    - Save Credentials
+      - cmdkey /list : this will list saved credentials
+      - runas /savecred /user:admin cmd.exe : this will save the credentials
+  
+    - IIS Config
+      - c:\inetpub\wwwroot\web.config
+      - c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
+      - use command "type c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString
+  
+  
