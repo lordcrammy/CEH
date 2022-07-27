@@ -42,7 +42,7 @@ Linux Priv Esc
   
     - Powershell History - in cmd type "type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
   
-    - Save Credentials
+    - Saved Credentials
       - cmdkey /list : this will list saved credentials
       - runas /savecred /user:admin cmd.exe : this will save the credentials
   
@@ -50,5 +50,9 @@ Linux Priv Esc
       - c:\inetpub\wwwroot\web.config
       - c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
       - use command "type c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString
+  
+    - PuTTY
+      - reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s
+  
   
   
