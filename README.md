@@ -8,6 +8,7 @@ Useful Links:
 - https://github.com/danielmiessler/SecLists - Wordlists, payloads, web shells
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md - Reverse shell cheatsheet
 - https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php - PHP reverse shell for web servers
+- https://www.abrictosecurity.com/blog/sqlmap-cheatsheet-and-examples/
 
 Linux Priv Esc
   Enumeration
