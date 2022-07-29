@@ -273,3 +273,19 @@ Microsoft Windows [Version 10.0.17763.1821]
 
 C:\Windows\system32> whoami
 nt authority\system
+
+  
+  
+  
+  
+  John the Ripper and Hashes
+  - hash identifier:
+  wget https://gitlab.com/kalilinux/packages/hash-identifier/-/raw/kali/master/hash-id.py
+  then
+  python3 hash-id.py
+  
+  to crack using that specific hash type:
+  john --format=[format] --wordlist=[path to wordlist] [path to file]
+  john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
+  
+  to grab Windows NTLM hashes, dump the SAM database with Mimikatz
