@@ -289,3 +289,7 @@ nt authority\system
   john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
   
   to grab Windows NTLM hashes, dump the SAM database with Mimikatz
+  
+  John the Ripper custom rules Wiki: https://www.openwall.com/john/doc/RULES.shtml
+  
+  
