@@ -10,7 +10,7 @@ Useful Links:
 - https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php - PHP reverse shell for web servers
 - https://www.abrictosecurity.com/blog/sqlmap-cheatsheet-and-examples/
 - https://explainshell.com/
-
+- https://github.com/wpscanteam/wpscan/wiki/WPScan-User-Documentation
 
 
 ENUMERATION
@@ -89,7 +89,7 @@ Linux Priv Esc
   https://jlajara.gitlab.io/Potatoes_Windows_Privesc
   
     Stored Credentials
-    - Unattended Windows Installations
+      Unattended Windows Installations
       - c:\Unattend.xml
       - c:\Windows\Panther\Unattend.xml
       - c:\Windows\Panther\Unattend\Unattend.xml
@@ -120,6 +120,7 @@ Linux Priv Esc
     "icacls" shows permissions.  if you want to add more, "icacls <file> /grant Everyone:F"
   
       - SCM shows which permissions services run as "sc qc apphostsvc"
+  
   C:\> sc qc WindowsScheduler
 [SC] QueryServiceConfig SUCCESS
 
