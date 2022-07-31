@@ -11,7 +11,9 @@ Useful Links:
 - https://www.abrictosecurity.com/blog/sqlmap-cheatsheet-and-examples/
 - https://explainshell.com/
 - https://github.com/wpscanteam/wpscan/wiki/WPScan-User-Documentation
-
+- https://unit42.paloaltonetworks.com/using-wireshark-display-filter-expressions/
+- https://github.com/Yokonakajima11/HackTheBox
+- https://www.kali.org/tools/
 
 ENUMERATION
 
@@ -58,6 +60,15 @@ smbmap -H <ip>
   For FTP to download all:  wget -r --no-passive ftp://(USERNAME):(PASSWORD)@(TARGET)
 
 
+Searchsploit useful commands:
+  - searchsploit "Linux Kernel"
+  - searchsploit -m 7618 : Paste the exploit in the current directory
+  - searchsploit -p 7618[.c] : Show complete path
+  - searchsploit --nmap file.xml : Search vulns inside an NMAP XML result file
+  
+  
+  
+  
 
 Linux Priv Esc
   Enumeration
