@@ -18,6 +18,7 @@ Useful Links:
 - https://github.com/ius/rsatool
 - https://github.com/RsaCtfTool/RsaCtfTool
 - https://gchq.github.io/CyberChef/ : Generate hashes using different methods
+- https://hashcat.net/wiki/doku.php?id=example_hashes : Hash examples for various hashing algorithms (used with hashcat usually)
 
 ENUMERATION
 
