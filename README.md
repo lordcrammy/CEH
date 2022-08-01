@@ -14,6 +14,9 @@ Useful Links:
 - https://unit42.paloaltonetworks.com/using-wireshark-display-filter-expressions/
 - https://github.com/Yokonakajima11/HackTheBox
 - https://www.kali.org/tools/
+- https://muirlandoracle.co.uk/2020/01/29/rsa-encryption/
+- https://github.com/ius/rsatool
+- https://github.com/RsaCtfTool/RsaCtfTool
 
 ENUMERATION
 
