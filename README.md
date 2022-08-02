@@ -22,6 +22,7 @@ Useful Links:
 - https://medium.com/mii-cybersec/gaining-credentials-easily-with-responder-tool-b821f33e342b : get credentials for Windows using MITM
 - https://www.kali.org/tools/enum4linux/ : used to enumerate users and shares from windows/Samba shares
 - https://github.com/Samsar4/Ethical-Hacking-Labs
+- https://diarium.usal.es/pmgallardo/2020/12/13/tools-for-ceh-practical
 
 
 Impacket or Secretsdump.py?
