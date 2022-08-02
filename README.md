@@ -21,6 +21,11 @@ Useful Links:
 - https://hashcat.net/wiki/doku.php?id=example_hashes : Hash examples for various hashing algorithms (used with hashcat usually)
 - https://medium.com/mii-cybersec/gaining-credentials-easily-with-responder-tool-b821f33e342b : get credentials for Windows using MITM
 - https://www.kali.org/tools/enum4linux/ : used to enumerate users and shares from windows/Samba shares
+- https://github.com/Samsar4/Ethical-Hacking-Labs
+
+
+Impacket or Secretsdump.py?
+
 
 ENUMERATION
 
